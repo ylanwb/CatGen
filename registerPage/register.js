@@ -11,6 +11,9 @@ const passwordErrorTwo = document.getElementById("passwordErrorTwo");
 
 const button = document.getElementById("button");
 
+const hover = document.querySelector(":hover")
+
+const href = document.querySelector("a")
 let userNameErrors = true;
 let emailErrors = true;
 let passwordErrors = true;
@@ -21,6 +24,7 @@ function checkFirstName(value) {
     userNameError.style.display = "flex";
     userNameErrorTwo.style.display = "none";
     button.setAttribute("disabled", "true");
+    hover
   } else if (value.length <= 3) {
     userNameErrorTwo.style.display = "flex";
     userNameError.style.display = "none";
@@ -30,7 +34,7 @@ function checkFirstName(value) {
     userNameErrorTwo.style.display = "none";
     userNameError.style.display = "none";
     button.removeAttribute("disabled");
-    firstNameErrors = false;
+    userNameErrors = false;
     console.log(value)
   }
 }
@@ -87,7 +91,8 @@ button.addEventListener("click", function () {
   checkPassword(password.value);
   console.log("clickedButton")
   if (!userNameErrors && !emailErrors && !passwordErrors === true) {
-    navigateToSignIn.setAttribute("href", "./login.html");
+    href.setAttribute("href", "http://127.0.0.1:5500/loginPage/login.html#");
+    console.log(button)
   } else {
     console.log("Error")
   }
