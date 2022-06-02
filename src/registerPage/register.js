@@ -49,7 +49,7 @@ emailErrorTwo.setAttribute("id", "emailErrorTwo");
 const inputPassword = document.createElement("input");
 inputPassword.classList.add("userInputs");
 inputPassword.setAttribute("id", "password");
-inputPassword.type = "text";
+inputPassword.type = "password";
 inputPassword.required = "true";
 const labelPassword = document.createElement("label");
 labelPassword.setAttribute("id", "labelId");
@@ -71,12 +71,13 @@ buttonContainer.setAttribute("id", "buttonContainer");
 const href = document.createElement("a");
 href.setAttribute("href", "#");
 const button = document.createElement("button");
-button.setAttribute("id", "button");
+button.setAttribute("id", "registerButton");
 button.innerText = "Sign Up!";
 const createAccount = document.createElement("span");
 createAccount.innerText = "Have an Account?";
 const signInHref = document.createElement("a");
-signInHref.setAttribute("href", "../loginPage/login.html");
+signInHref.id = "signInButton";
+signInHref.setAttribute("href", "../index.html");
 signInHref.textContent = " Sign in!";
 
 const br = document.createElement("br");
@@ -135,23 +136,20 @@ let emailErrors = true;
 let passwordErrors = true;
 
 function checkFirstName(value) {
-  console.log(value);
   if (value === "") {
     userNameError.style.display = "flex";
     userNameErrorTwo.style.display = "none";
     button.setAttribute("disabled", "true");
   } else if (value.length <= 3) {
-      userNameErrorTwo.style.display = "flex";
-      userNameError.style.display = "none";
-      button.setAttribute("disabled", "true");
-      console.log("Insufficient Character Amount");
-    } else {
-      userNameErrorTwo.style.display = "none";
-      userNameError.style.display = "none";
-      button.removeAttribute("disabled");
-      userNameErrors = false;
-      console.log(value);
-    }
+    userNameErrorTwo.style.display = "flex";
+    userNameError.style.display = "none";
+    button.setAttribute("disabled", "true");
+  } else {
+    userNameErrorTwo.style.display = "none";
+    userNameError.style.display = "none";
+    button.removeAttribute("disabled");
+    userNameErrors = false;
+  }
 }
 function checkEmail(value) {
   if (value === "") {
@@ -161,12 +159,11 @@ function checkEmail(value) {
   } else if (value.length <= 3) {
     emailErrorTwo.style.display = "flex";
     emailError.style.display = "none";
-    console.log("Insufficient Character Amount");
     button.setAttribute("disabled", "true");
   } else {
     emailErrorTwo.style.display = "none";
     emailError.style.display = "none";
-    console.log(value);
+
     button.removeAttribute("disabled");
     emailErrors = false;
   }
@@ -179,12 +176,11 @@ function checkPassword(valueOfPassword) {
   } else if (valueOfPassword.length <= 7) {
     passwordErrorTwo.style.display = "flex";
     passwordError.style.display = "none";
-    console.log("Insufficient Character Amount");
     button.setAttribute("disabled", "true");
   } else {
     passwordError.style.display = "none";
     passwordErrorTwo.style.display = "none";
-    console.log(valueOfPassword);
+
     button.removeAttribute("disabled");
     passwordErrors = false;
   }
@@ -200,15 +196,15 @@ inputPassword.onkeyup = function () {
   checkPassword(inputPassword.value);
 };
 
-button.addEventListener("click", function () {
-  checkFirstName(inputUserName.value);
-    checkEmail(inputEmail.value);
-    checkPassword(inputPassword.value);
-  console.log("clickedButton");
-  if (!userNameErrors && !emailErrors && !passwordErrors === true) {
-    href.setAttribute("href", "http://127.0.0.1:5500/loginPage/login.html#");
-    console.log(button);
-  } else {
-    console.log("Error");
-  }
-});
+// button.addEventListener("click", function () {
+//   checkFirstName(inputUserName.value);
+//   checkEmail(inputEmail.value);
+//   checkPassword(inputPassword.value);
+//   console.log("clickedButton");
+//   if (!userNameErrors && !emailErrors && !passwordErrors === true) {
+//     href.setAttribute("href", "http://127.0.0.1:5500/loginPage/login.html#");
+//     console.log(button);
+//   } else {
+//     console.log("Error");
+//   }
+// });

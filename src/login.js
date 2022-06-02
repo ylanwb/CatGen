@@ -7,22 +7,22 @@ const welcomeMsg = document.createElement("p")
 const sleepyCat = document.createElement("img")
 const userLogin = document.createElement("div")
 
-const inputUserName = document.createElement("input")
-inputUserName.classList.add("userInputs");
-inputUserName.setAttribute("id", "username");
-inputUserName.type = "text";
-inputUserName.required = "true";
-const labelUserName = document.createElement("label")
-labelUserName.setAttribute("id", "labelId");
-labelUserName.setAttribute("for", "username");
-const userName = document.createElement("span")
-userName.setAttribute("id", "infoOne");
-userName.innerText = "Username";
+const inputEmailAddress = document.createElement("input")
+inputEmailAddress.classList.add("userInputs");
+inputEmailAddress.setAttribute("id", "email");
+inputEmailAddress.type = "text";
+inputEmailAddress.required = "true";
+const labelEmailAddress = document.createElement("label")
+labelEmailAddress.setAttribute("id", "labelId");
+labelEmailAddress.setAttribute("for", "email");
+const emailAddress = document.createElement("span")
+emailAddress.setAttribute("id", "infoOne");
+emailAddress.innerText = "Email Address";
 
 const inputPassword = document.createElement("input")
 inputPassword.classList.add("userInputs");
 inputPassword.setAttribute("id", "password");
-inputPassword.type = "text";
+inputPassword.type = "password";
 inputPassword.required = "true";
 const labelPassword = document.createElement("label")
 labelPassword.setAttribute("id", "labelId");
@@ -40,7 +40,7 @@ loginError.innerText = "Invalid Username or Password"
 const href = document.createElement("a");
 href.setAttribute("href", "#");
 const button = document.createElement("button");
-button.setAttribute("id", "button");
+button.setAttribute("id", "loginButton");
 button.innerText = "Sign in!";
 
 const createAccountContainer = document.createElement("div")
@@ -48,7 +48,7 @@ createAccountContainer.classList.add("createAccount")
 const newHere = document.createElement("span")
 newHere.innerText = "New Here?"
 const createAccount = document.createElement("a")
-createAccount.setAttribute("href", "../registerPage/register.html")
+createAccount.setAttribute("href", "./registerPage/register.html")
 createAccount.innerText = " Create an Account"
 
 const catPicBox = document.createElement("div")
@@ -75,9 +75,9 @@ loginContent.appendChild(welcomeMsg)
 loginContent.appendChild(sleepyCat)
 loginContent.appendChild(userLogin)
 
-userLogin.appendChild(inputUserName)
-userLogin.appendChild(labelUserName)
-labelUserName.appendChild(userName)
+userLogin.appendChild(inputEmailAddress)
+userLogin.appendChild(labelEmailAddress)
+labelEmailAddress.appendChild(emailAddress)
 
 userLogin.appendChild(inputPassword)
 userLogin.appendChild(labelPassword)

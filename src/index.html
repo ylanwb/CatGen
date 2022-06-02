@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div id="mainContainer" class="main-container"></div>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+      import {
+        getAuth,
+        signInWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+      import {
+        getFirestore,
+        collection,
+        doc,
+        query,
+        where,
+        updateDoc,
+        getDocs,
+      } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js";
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBYohWrMXDTv-2q8VlNVh0VnFf96iPIyxs",
+        authDomain: "randoncatproject.firebaseapp.com",
+        projectId: "randoncatproject",
+        storageBucket: "randoncatproject.appspot.com",
+        messagingSenderId: "16605744309",
+        appId: "1:16605744309:web:a45062d14a11586e0542fc",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth();
+      const db = getFirestore(app);
+      const signInbutton = document.getElementById("loginButton");
+
+      signInbutton.addEventListener("click", async (e) => {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        if ((username === "", password === "")) {
+          alert("fill out the inputs");
+          return;
+        }
+        console.log(username, password);
+        await signInWithEmailAndPassword(auth, username, password)
+          .then(async (userCredential) => {
+            const user = userCredential.user;
+            const lastLoggedIn = new Date();
+            const userRef = doc(db, "users", user.uid);
+            await updateDoc(userRef, {
+              lastLoggedIn: lastLoggedIn,
+            });
+            const homeButton = document.createElement("a");
+            homeButton.href = "./homePage/home.html";
+            homeButton.click();
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      });
+    </script>
+    <script type="text/javascript" src="login.js"></script>
+  </body>
+</html>
