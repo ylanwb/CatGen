@@ -49,7 +49,7 @@
       const signInbutton = document.getElementById("loginButton");
 
       signInbutton.addEventListener("click", async (e) => {
-        let username = document.getElementById("username").value;
+        let username = document.getElementById("email").value;
         let password = document.getElementById("password").value;
         if ((username === "", password === "")) {
           alert("fill out the inputs");
@@ -70,6 +70,7 @@
           })
           .catch((err) => {
             console.log(err);
+            loginError.style.display = "flex"
           });
       });
     </script>
