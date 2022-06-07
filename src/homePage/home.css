@@ -112,11 +112,11 @@ a, a:hover, a:focus, a:active {
     font-size: 25px;
 }
 .randomCatContainer {
-    max-width: 840px;
+    max-width: 90%;
+    min-width: 90%;
 }
 #randomCatPic {
-    width: 100%;
-    min-width: 840px;
+    width: 90%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     box-shadow: 0px 0px 5px 0px;
@@ -125,14 +125,15 @@ a, a:hover, a:focus, a:active {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-top: 25px;
-    max-width: 840px;
-    width: 100%;
+    width: 81%;
     height: 8vh;
     border: none;
     cursor: pointer;
     font-size: 20px;
     background-color: black;
     color: white;
+    box-shadow: 0px 0px 5px 0px black;
+
 }
 #catGeneratorBtn:hover {
     font-size: 25px;
@@ -144,8 +145,97 @@ a, a:hover, a:focus, a:active {
     justify-content: center;
     align-items: flex-end;
     padding: 15px;
+    text-align: center;
 }
-
+.loading-animation-one {
+    width: 20vh;
+    height: 20vh;
+    border: 1vh solid #eaeaea;
+    display: block;
+    border-radius: 20vh;
+    position: relative;
+    animation: spin90 50s infinite;
+    margin-left: calc(50% - 10vh);
+    margin-top: calc(50vh - 10vh);
+  }
+  .loading-animation-two {
+    top: calc(50% - 8.5vh);
+    left: calc(50% - 8.5vh);
+    width: 15vh;
+    height: 15vh;
+    border: 1vh solid #a5a4a4;
+    display: block;
+    border-radius: 20vh;
+    position: relative;
+    animation-delay: 2s;
+    animation: spin90 50s infinite;
+  }
+  .loading-animation-three {
+    top: calc(50% - 6vh);
+    left: calc(50% - 6vh);
+    width: 10vh;
+    height: 10vh;
+    border: 1vh solid #b8b8b8;
+    display: block;
+    border-radius: 20vh;
+    position: relative;
+    animation-delay: 2s;
+    animation: spin90 10s infinite;
+  }
+  .loading-animation-one::after {
+    content: "";
+    width: 19vh;
+    height: 4vh;
+    border-left: 2vh solid #ffffff;
+    border-right: 2vh solid #ffffff;
+    position: absolute;
+    top: calc(50% - 1.8vh);
+    left: -1.5vh;
+  }
+  .loading-animation-two::after {
+    content: "";
+    width: 13.6vh;
+    height: 4vh;
+    border-left: 2vh solid #ffffff;
+    border-right: 2vh solid #ffffff;
+    position: absolute;
+    top: calc(50% - 1.8vh);
+    left: -1.25vh;
+  }
+  .loading-animation-three::after {
+    content: "";
+    width: 8.8vh;
+    height: 4vh;
+    border-left: 2vh solid #ffffff;
+    border-right: 2vh solid #ffffff;
+    position: absolute;
+    top: calc(50% - 1.8vh);
+    left: -1.25vh;
+  }
+  .container {
+    /* position: absolute; */
+    /* top: 0; */
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    /* background-color: #f2f2f2; */
+  }
+  .container:active {
+    transform: translateY(-200rem);
+    transition: transform 15s;
+  }
+  @keyframes spin90 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(90deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
 @media (max-width: 1250px) {
     /* .navContentOne {
     }
@@ -163,11 +253,13 @@ a, a:hover, a:focus, a:active {
         align-items: center;
         position: fixed;
         top: 75px;
-        left: -100%;
+        left: -105%;
         height: 100%;
-        width: 100%;
+        width: 102%;
         transition: all .5s;
         background-color: #ffffff;
+        padding-top: 8vh;
+        border-right: 2px solid black;
     }
     .navBar {
         display: flex;
@@ -190,6 +282,9 @@ a, a:hover, a:focus, a:active {
         left: 0;
     }
     #catGeneratorBtn {
-        width: 90%;
+        font-size: 12px;
+    }
+    #catGeneratorBtn:hover {
+        font-size: 15px;
     }
 }

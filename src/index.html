@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="login.css" />
+    <link rel="icon" href="https://static-cdn.jtvnw.net/jtv_user_pictures/a01850bc-c2d7-4e42-96c9-c6bc8f370a7d-profile_image-300x300.png">
   </head>
   <body>
     <div id="mainContainer" class="main-container"></div>
@@ -55,22 +56,24 @@
           alert("fill out the inputs");
           return;
         }
-        console.log(username, password);
         await signInWithEmailAndPassword(auth, username, password)
           .then(async (userCredential) => {
             const user = userCredential.user;
             const lastLoggedIn = new Date();
+            console.log(user);
             const userRef = doc(db, "users", user.uid);
             await updateDoc(userRef, {
               lastLoggedIn: lastLoggedIn,
             });
+            console.log(user);
+            window.localStorage.setItem("user", JSON.stringify(true));
             const homeButton = document.createElement("a");
             homeButton.href = "./homePage/home.html";
             homeButton.click();
           })
           .catch((err) => {
             console.log(err);
-            loginError.style.display = "flex"
+            loginError.style.display = "flex";
           });
       });
     </script>
