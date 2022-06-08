@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  /* box-sizing: border-box; */
+  list-style: none;
+}
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.navBar {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 65px;
+  box-shadow: 1px 1px 5px;
+  font-family: Comic Sans MS;
+  z-index: 5;
+}
+.navContentTwo {
+  float: right;
+  display: flex;
+  align-items: center;
+  height: 65px;
+}
+#navBarMenu {
+  height: 100%;
+  display: none;
+  cursor: pointer;
+}
+#check {
+  display: none;
+}
+#labelCheck {
+  height: 100%;
+}
+#navBarPfp {
+  height: 100%;
+  padding-right: 25px;
+  cursor: pointer;
+}
+.title {
+  margin-left: 65px;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 65px;
+}
+.contentList {
+  display: flex;
+  margin-right: 5px;
+  padding-right: 10px;
+  float: right;
+  position: relative;
+  top: -65px;
+  z-index: 2;
+}
+#imgList {
+  height: 65px;
+}
+#list {
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  padding: 0 20px;
+  line-height: 65px;
+}
+#list:hover {
+  cursor: pointer;
+  background: none;
+  background-color: #eaeaea;
+}
+#signInBtn {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: none;
+  padding-right: 28px;
+  font-family: Comic Sans MS;
+}
+#signInBtn:hover {
+  background: none;
+  background-color: #eaeaea;
+  cursor: pointer;
+}
+#signInImg {
+  height: 80%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+#signInHref {
+  margin-right: 30px;
+  width: 140px;
+  height: 80%;
+}
+#listCat {
+  width: 100%;
+  display: none;
+}
+.contactContainer {
+  margin-top: 65px;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Comic Sans MS;
+}
+
+
+@media (max-width: 1250px) {
+  .contentList {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 75px;
+    left: -105%;
+    height: 100%;
+    width: 102%;
+    transition: all 0.5s;
+    background-color: #ffffff;
+    border-right: 2px solid black;
+  }
+  .navBar {
+    display: flex;
+    justify-content: center;
+  }
+  #navBarMenu {
+    display: inline-block;
+  }
+  #list {
+    margin: 0 10px;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  #listCat {
+    display: block;
+    bottom: 0;
+  }
+  #check:checked ~ .contentList {
+    left: 0;
+  }
+}
+
+/* 
+.userNameInputs {
+  border-style: none;
+  border-bottom: 1px solid #ad1414;
+  outline: none;
+  width: 400px;
+  height: 25px;
+  font-size: 20px;
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+.userNameInputs:focus + label > span,
+.userNameInputs:valid + label > span {
+  visibility: hidden;
+}
+#labelUserName {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  position: relative;
+  top: -25px;
+  width: 100%;
+  display: block;
+  color: #cf1111;
+  font-weight: bold;
+} */
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+.catPicBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0px 0px 12px #888888;
+  width: 30vw;
+  height: 70vh;
+  align-items: center;
+}
+#catOne {
+  max-width: 90%;
+  min-height: 200px;
+}
+#catTwo {
+  max-width: 100%;
+  max-height: 400px;
+}
+.loginBox {
+  background-color: white;
+  display: flex;
+  box-shadow: 0px 0px 12px #888888;
+  width: 25vw;
+  height: 70vh;
+}
+h1 {
+  color: #080808;
+  font-family: cursive;
+}
+p {
+  color: #838382;
+}
+a {
+  color: darkslategray;
+}
+a:hover {
+  color: black;
+}
+.loginContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.userLogin {
+  width: 100%;
+  margin-top: 10px;
+  text-align: left;
+  margin-left: 20%;
+}
+.userInfos {
+  font-size: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+.userInputs {
+  border-style: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+  width: 80%;
+  height: 20%;
+  font-size: 20px;
+  position: relative;
+  display: block;
+  padding-bottom: 3px;
+  margin-top: 25px;
+}
+.userInputs:focus,
+.userInputs:valid {
+  border-bottom: 1px solid #838382;
+}
+.userInputs:focus + label > span,
+.userInputs:valid + label > span {
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease;
+  position: absolute;
+  top: -25px;
+  font-size: 17px;
+  color: #838382;
+}
+#labelId {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  display: block;
+}
+/* button {
+  border-radius: 40px;
+  margin-top: 50px;
+  width: 80%;
+  height: 40%;
+  border: none;
+  background-color: white;
+  border: 1px solid black;
+  transition-duration: 0.4s;
+} */
+button:hover {
+  cursor: pointer;
+  background-color: #838382;
+  color: white;
+}
+#infoOne {
+  position: absolute;
+}
+#infoTwo {
+  position: absolute;
+}
+#infoThree {
+  position: absolute;
+}
+.requiredFields {
+  color: red;
+  font-size: 15px;
+  display: none;
+  position: relative;
+  top: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.requiredAmount {
+  color: red;
+  font-size: 15px;
+  display: none;
+  position: relative;
+  top: -1px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#messageError {
+  position: relative;
+  top: 15px;
+}
+.createAccount {
+  margin-top: 60%;
+  color: #838382;
+}

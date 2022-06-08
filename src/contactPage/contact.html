@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CatGen Contact</title>
     <link rel="stylesheet" href="contact.css">
     <link rel="icon" href="https://static-cdn.jtvnw.net/jtv_user_pictures/a01850bc-c2d7-4e42-96c9-c6bc8f370a7d-profile_image-300x300.png">
 </head>
 <body>
-    <span>contact</span>
-    <script type="module" src="contact.js"></script>
+  <nav class="navBar">
+    <input type="checkbox" id="check" />
+    <label for="check" id="labelCheck">
+      <img
+        id="navBarMenu"
+        class="navItems"
+        src="https://static.thenounproject.com/png/2292434-200.png"
+        alt="menuIcon"
+      />
+    </label>
+    <a href="./contact.html"><p class="navItems title">World Cat Day</p></a>
+    <ul class="contentList">
+      <a href="../homePage/home.html"><li id="list">Home</li></a>
+      <a href="..//aboutPage/about.html"><li id="list">About</li></a>
+      <a href="../contactPage/contact.html"><li id="list">Contact</li></a>
+      <li id="imgList">
+        <a href="../index.html" id="signInHref">
+          <button id="signInBtn">
+            <img
+              id="signInImg"
+              src="https://cdn-icons-png.flaticon.com/512/152/152533.png"
+            />
+            Login
+          </button>
+        </a>
+      </li>
+      <li>
+        <img
+          id="listCat"
+          src="https://thumbs.dreamstime.com/b/red-cat-20654000.jpg"
+        />
+      </li>
+    </ul>
+  </nav>
+  <div class="contactContainer">
+    <div class="userLogin">
+      <input class="userInputs" id="username" type="text" required />
+              <label for="username" id="labelId">
+                  <span id="infoOne">Username</span>
+              </label>
+              <span class="requiredFields hide" id="userNameError"
+      >Please enter your Username</span
+      >
+      <input class="userInputs" id="password" type="text" required />
+              <label for="password" id="labelId">
+                  <span id="infoThree">Email</span>
+              </label>
+              <span class="requiredFields hide" id="passwordError"
+      >Please enter your Password</span
+      >
+      <input class="userInputs" id="password" type="text" required />
+      <label for="password" id="labelId">
+          <span id="infoThree">Message</span>
+      </label>
+      <a href="#"><button id="button">Submit!</button></a>
+  </div>
+  </div>
+
+  </div>
+  <script type="module" src="contact.js"></script>
 </body>
 </html>
+<!-- <div class="userNameContainer">
+  <input
+    class="userNameInputs"
+    id="userName"
+    type="text"
+    required
+  />
+  <label for="userName" id="labelUserName">
+    <span id="userName">Username</span>
+  </label>
+</div> -->

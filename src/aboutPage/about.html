@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CatGen Home</title>
-    <link rel="stylesheet" href="home.css" />
+    <title>CatGen About</title>
+    <link rel="stylesheet" href="about.css" />
     <link
       rel="icon"
       href="https://static-cdn.jtvnw.net/jtv_user_pictures/a01850bc-c2d7-4e42-96c9-c6bc8f370a7d-profile_image-300x300.png"
@@ -22,7 +22,7 @@
           alt="menuIcon"
         />
       </label>
-      <a href="./home.html"><p class="navItems title">World Cat Day</p></a>
+      <a href="./about.html"><p class="navItems title">World Cat Day</p></a>
       <ul class="contentList">
         <a href="../homePage/home.html"><li id="list">Home</li></a>
         <a href="..//aboutPage/about.html"><li id="list">About</li></a>
@@ -38,32 +38,26 @@
             </button>
           </a>
         </li>
-        <li><img id="listCat" src="https://thumbs.dreamstime.com/b/red-cat-20654000.jpg" /></li>
+        <li>
+          <img
+            id="listCat"
+            src="https://thumbs.dreamstime.com/b/red-cat-20654000.jpg"
+          />
+        </li>
       </ul>
     </nav>
 
-    <div class="catImgGenerator">
-      <h1 id="imgGnrTitle">Random Cat Image Generator</h1>
-      <p id="imgGnrText">Click to generate a cute and adorable cat picture</p>
-      <button id="catGeneratorBtn">Click Here To Generate A Cat!</button>
-      <div id="catContainer" class="randomCatContainer">
-        <div id="loadCircle" class="loadContainer">
-          <div class="loading-animation-one">
-            <div class="loading-animation-two">
-              <div class="loading-animation-three"></div>
-            </div>
-          </div>
-        </div>
-        <img id="randomCatPic" src="" />
+    <div class="aboutContainer">
+      <div id="catContainer" class="catContainer">
+        <img id="catPic" src="https://cdn.cnn.com/cnnnext/dam/assets/210303111816-catsupplieslead.jpg" />
       </div>
-      <div class="bottomStuff">
-        <span
-          >Liscensed by Giorno Giovanna as of June 5th, 2022 at 9:10AM in the
-          morning.</span
-        >
-      </div>
+      <h1 id="aboutTitle">International World Cat Day</h1>
+      <p id="aboutText">August 8th</p>
+      <p id="aboutParagraph">The day all of the world comes to celebrate one of mankind's most
+        common and loved pet, the cat! First created in 2002, it is now celebrated to show love to our mischievous but adorable little feline friends.</p>
+        <img id="catMsg" src="https://www.vdio.com/wp-content/uploads/2017/11/International-Cat-Day-August-08.jpg" />
     </div>
-
-    <script type="module" src="./home.js"></script>
+    <img id="leftConfetti" src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/28824.png" />
+    <img id="rightConfetti" src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/28824.png" />
   </body>
 </html>
