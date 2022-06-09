@@ -1,84 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CatGen Contact</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="icon" href="https://static-cdn.jtvnw.net/jtv_user_pictures/a01850bc-c2d7-4e42-96c9-c6bc8f370a7d-profile_image-300x300.png">
-</head>
-<body>
-  <nav class="navBar">
-    <input type="checkbox" id="check" />
-    <label for="check" id="labelCheck">
-      <img
-        id="navBarMenu"
-        class="navItems"
-        src="https://static.thenounproject.com/png/2292434-200.png"
-        alt="menuIcon"
-      />
-    </label>
-    <a href="./contact.html"><p class="navItems title">World Cat Day</p></a>
-    <ul class="contentList">
-      <a href="../homePage/home.html"><li id="list">Home</li></a>
-      <a href="..//aboutPage/about.html"><li id="list">About</li></a>
-      <a href="../contactPage/contact.html"><li id="list">Contact</li></a>
-      <li id="imgList">
-        <a href="../index.html" id="signInHref">
-          <button id="signInBtn">
-            <img
-              id="signInImg"
-              src="https://cdn-icons-png.flaticon.com/512/152/152533.png"
-            />
-            Login
-          </button>
-        </a>
-      </li>
-      <li>
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      rel="icon"
+      href="https://static-cdn.jtvnw.net/jtv_user_pictures/a01850bc-c2d7-4e42-96c9-c6bc8f370a7d-profile_image-300x300.png"
+    />
+  </head>
+  <body>
+    <nav class="navBar">
+      <input type="checkbox" id="check" />
+      <label for="check" id="labelCheck">
         <img
-          id="listCat"
-          src="https://thumbs.dreamstime.com/b/red-cat-20654000.jpg"
+          id="navBarMenu"
+          class="navItems"
+          src="https://static.thenounproject.com/png/2292434-200.png"
+          alt="menuIcon"
         />
-      </li>
-    </ul>
-  </nav>
-  <div class="contactContainer">
-    <div class="userLogin">
-      <input class="userInputs" id="username" type="text" required />
-              <label for="username" id="labelId">
-                  <span id="infoOne">Username</span>
-              </label>
-              <span class="requiredFields hide" id="userNameError"
-      >Please enter your Username</span
-      >
-      <input class="userInputs" id="password" type="text" required />
-              <label for="password" id="labelId">
-                  <span id="infoThree">Email</span>
-              </label>
-              <span class="requiredFields hide" id="passwordError"
-      >Please enter your Password</span
-      >
-      <input class="userInputs" id="password" type="text" required />
-      <label for="password" id="labelId">
-          <span id="infoThree">Message</span>
       </label>
-      <a href="#"><button id="button">Submit!</button></a>
-  </div>
-  </div>
+      <a href="./contact.html"><p class="navItems title">World Cat Day</p></a>
+      <ul class="contentList">
+        <a href="../homePage/home.html"><li id="list">Home</li></a>
+        <a href="..//aboutPage/about.html"><li id="list">About</li></a>
+        <a href="../contactPage/contact.html"><li id="list">Contact</li></a>
+        <li id="imgList">
+          <a href="../index.html" id="signInHref">
+            <button id="signInBtn">
+              <img
+                id="signInImg"
+                src="https://cdn-icons-png.flaticon.com/512/152/152533.png"
+              />
+              Login
+            </button>
+          </a>
+        </li>
+        <li>
+          <img
+            id="listCat"
+            src="https://thumbs.dreamstime.com/b/red-cat-20654000.jpg"
+          />
+        </li>
+      </ul>
+    </nav>
+    <div class="contactContainer">
+      <h1>Contact Us!</h1>
+      <div class="contactContent">
+        <div class="catMailImgContainer">
+          <img
+            id="catMailImg"
+            src="data:image/png;base64,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"
+            alt=""
+          />
+        </div>
+        <div class="userLogin">
+          <form
+            action="https://formsubmit.co/chingunzolboo0216@gmail.com"
+            method="POST"
+          >
+            <input class="userInputs" name="username" id="username" type="text" required />
+            <label for="username" id="labelId">
+              <span id="infoOne">Username</span>
+            </label>
 
-  </div>
-  <script type="module" src="contact.js"></script>
-</body>
+            <input class="userInputs" name="email" id="email" type="email" required />
+            <label for="email" id="labelId">
+              <span id="infoThree">Email</span>
+            </label>
+
+            <textarea
+              class="userMsgInput"
+              id="userMsg"
+              name="message"
+              rows="8"
+              cols="10"
+              wrap="soft"
+              required
+            ></textarea>
+            <label for="userMsg" id="msgLabel">
+              <span id="msg">Your Messages...</span>
+            </label>
+            <a href="#"><button id="submitButton">Submit!</button></a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+      } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+      import {
+        getDatabase,
+        set,
+        ref,
+      } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
+      import {
+        getFirestore,
+        collection,
+        doc,
+        addDoc,
+        setDoc,
+      } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-firestore.js";
+
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBYohWrMXDTv-2q8VlNVh0VnFf96iPIyxs",
+        authDomain: "randoncatproject.firebaseapp.com",
+        projectId: "randoncatproject",
+        storageBucket: "randoncatproject.appspot.com",
+        messagingSenderId: "16605744309",
+        appId: "1:16605744309:web:a45062d14a11586e0542fc",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth();
+      const db = getFirestore(app);
+      const contactCollectionRef = collection(db, "user-messages");
+      const submitBtn = document.getElementById("submitButton");
+
+      const userName = document.getElementById("username");
+      const email = document.getElementById("email");
+      const message = document.getElementById("userMsg");
+
+      submitBtn.addEventListener("click", async () => {
+        if (userName.value == "" || email.value == "" || message.value == "") {
+          return;
+        }
+        await setDoc(doc(contactCollectionRef), {
+          userName: userName.value,
+          email: email.value,
+          message: message.value
+        })
+      });
+    </script>
+
+    <script type="module" src="contact.js"></script>
+  </body>
 </html>
-<!-- <div class="userNameContainer">
-  <input
-    class="userNameInputs"
-    id="userName"
-    type="text"
-    required
-  />
-  <label for="userName" id="labelUserName">
-    <span id="userName">Username</span>
-  </label>
-</div> -->
