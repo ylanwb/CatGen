@@ -105,3 +105,8 @@ createAccountContainer.appendChild(createAccount);
 mainContainer.appendChild(catPicBox);
 catPicBox.appendChild(catOne);
 catPicBox.appendChild(catTwo);
+
+window.onload = function () {
+  inputEmailAddress.value = " ";
+  inputPassword.value = " ";
+};
